@@ -21,6 +21,7 @@ typedef struct timeval TIMEVAL;
 
 #ifdef __cplusplus
 #include <algorithm>
+#include <memory>
 #include <string>
 extern std::string StringFromWideString(std::string wideString);
 extern std::string WideStringFromString(std::string string);

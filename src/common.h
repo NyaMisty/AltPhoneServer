@@ -19,5 +19,7 @@ typedef struct timeval TIMEVAL;
 typedef int BOOL;
 
 #ifdef __cplusplus
+#include <algorithm>
+#include <vector>
 using std::min;
 #endif

@@ -1,4 +1,5 @@
 #include <sys/random.h>
+#include <unistd.h>
 #include <fcntl.h>
 
 ssize_t getrandom(void *buf, size_t buflen, unsigned int flags) {
