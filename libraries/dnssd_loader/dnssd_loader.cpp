@@ -2,7 +2,9 @@
 #include <iostream>
 #include <string>
 #include <unistd.h>
+#ifdef __linux__
 #include <sys/prctl.h> // prctl(), PR_SET_PDEATHSIG
+#endif
 #include <signal.h> // signals
 
 
@@ -57,8 +59,10 @@ DNSServiceErrorType DNSSD_API DNSServiceRegister
             return EXIT_FAILURE;
         }
         if(child == 0){
+          #ifdef __linux__
             int r = prctl(PR_SET_PDEATHSIG, SIGTERM);
             if (r == -1) { perror(0); exit(1); }
+          #endif
             // test in case the original parent exited just
             // before the prctl() call
             if (getppid() != ppid_before_fork)

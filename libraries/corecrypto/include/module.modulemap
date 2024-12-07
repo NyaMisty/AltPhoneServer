@@ -1,0 +1,14 @@
+module CCoreCrypto [system] {
+    header "corecrypto/ccsrp.h"
+    header "corecrypto/ccdrbg.h"
+    header "corecrypto/ccsrp_gp.h"
+    header "corecrypto/ccdigest.h"
+    header "corecrypto/ccsha2.h"
+    header "corecrypto/ccpbkdf2.h"
+    header "corecrypto/cchmac.h"
+    header "corecrypto/ccaes.h"
+    header "corecrypto/ccpad.h"
+    header "corecrypto/ccn.h"
+
+    export *
+}
