@@ -57,8 +57,10 @@ The following environment var can be set for some special situation:
     2. Install dependencies:
         apk add zsh git curl wget g++ clang boost-static ninja boost-dev cmake make sudo bash vim libressl-dev util-linux-dev zlib-dev zlib-static
     3. Install corecrypto
-        download corecrypto from apple website, unzip corecrypto.zip; cd corecrypto; mkdir build; cd build; CC=clang CXX=clang++ cmake ..;
-        vim CMakeFiles/Makefile2, delete line starts with "all: corecrypto_perf/....." and "all: corecrypto_test/.....", then make; make install
+       - download corecrypto from apple website, unzip corecrypto.zip; cd corecrypto;
+       - vim CMakeLists.txt, delete references to code coverage like include(scripts/code-coverage.cmake), add_code_coverage(), target_code_coverage()
+       - mkdir build; cd build; CC=clang CXX=clang++ cmake ..;
+       - vim CMakeFiles/Makefile2, delete line starts with "all: corecrypto_perf/....." and "all: corecrypto_test/.....", then make; make install
     4. Install cpprestsdk
         git clone --recursive https://github.com/microsoft/cpprestsdk; cd cpprestsdk; mkdir build; cmake -DBUILD_SHARED_LIBS=0 ..; make; make install
 	    (if you're compiling for armv7, you have to grep -Wcast-align, and remove it, or the compiling would fail)
@@ -67,7 +69,10 @@ The following environment var can be set for some special situation:
     6. Compile AltServer-Linux
         git clone --recursive https://github.com/NyaMisty/AltServer-Linux
         cd AltServer-Linux
+        mkdir build
+        cd build
         make -f ../Makefile -j3
 	    (if you're compiling for ARM, i.e. armv7 or aarch64, you'll have to remove the -mno-default flag in Makefile)
 
   ```
+
