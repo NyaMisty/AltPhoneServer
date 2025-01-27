@@ -3,6 +3,8 @@ AltServer for AltStore, but on-device
 
 ## Usage
 
+Note: ChromeOS devices using the Crostini Linux virtual machine are NOT supported as Crostini does not support the USB header used on iPhones. Please purchace a Windows, macOS, or Linux device to use AltStore, or if your app is availble on the EU AltStore, install it via the EU method. Note that you have to move to an EU country if you aren't in an EU country to use this method, and JIT is not supported except for web browsers.
+
 - Install IPA: `./AltServer -u [UDID] -a [AppleID account] -p [AppleID password] [ipaPath.ipa]`
 - Running as AltServer Daemon: `./AltServer`
 - Full usage (maybe outdated, refer to `./AltServer -h` for the newest):
