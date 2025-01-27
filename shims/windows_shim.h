@@ -10,7 +10,9 @@ char *_itoa(int val, char *buf, int base);
 
 #include <limits.h>
 
+#ifndef __declspec
 #define __declspec(x)
+#endif
 
 #define OutputDebugStringW(x) (std::wcout << x)
 #define OutputDebugStringA(x) (std::cout << x)

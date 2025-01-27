@@ -28,6 +28,10 @@
 #include <pplx/threadpool.h>
 
 #include <uuid/uuid.h>
+#ifndef UUID_STR_LEN
+#define UUID_STR_LEN 37
+#endif
+
 std::string make_uuid() {
     uuid_t b;
 	char out[UUID_STR_LEN] = {0};
