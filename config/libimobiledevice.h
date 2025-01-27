@@ -78,8 +78,6 @@
 /* Define to 1 if you have the `strndup' function. */
 #define HAVE_STRNDUP 1
 
-
-
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #define HAVE_SYS_STAT_H 1
 
@@ -148,7 +146,6 @@
 /* Define if you have inotify support (linux only) */
 #define HAVE_INOTIFY 1
 
-
 /* Define if you have program_invocation_short_name */
 #define HAVE_PROGRAM_INVOCATION_SHORT_NAME 1
 
@@ -174,10 +171,8 @@
    to 0 otherwise. */
 #define HAVE_MALLOC 1
 
-
-
 /* Name of package */
-//#define PACKAGE "AltServer-Linux"
+// #define PACKAGE "AltServer-Linux"
 
 /* Define to the full name of this package. */
 #define PACKAGE_NAME "AltServer-Linux"
